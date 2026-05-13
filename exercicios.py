@@ -47,11 +47,14 @@
 # print(f"A potência do número {num_1} elevado a {pot} é {calc_pot}")
 
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
-celc = float(input("Digite uma temperatura em célcius: "))
-conversao_celcius_fahrenheit = (celc * 1.8) + 32
-print(f"{celc}Cº convertidos para Fahrenheit é {conversao_celcius_fahrenheit}Fº")
+# celc = float(input("Digite uma temperatura em célcius: "))
+# conversao_celcius_fahrenheit = (celc * 1.8) + 32
+# print(f"{celc}Cº convertidos para Fahrenheit é {conversao_celcius_fahrenheit}Fº")
 
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
+raio = float(input("Digite o valor do raio do circulo: "))
+calc_area = 3.14*(raio ** 2)
+print(f"A area do circulo é {calc_area:.2f}")
 
 # Strings (str)
 # 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
