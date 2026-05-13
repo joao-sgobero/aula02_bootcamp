@@ -41,12 +41,16 @@
 # print(f"A média do números é {media_num}")
 
 # 8. Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
-num_1 = int(input("Digite um número: "))
-pot = int(input("Digite um número para ser a potência: "))
-calc_pot = num_1 ** pot
-print(f"A potência do número {num_1} elevado a {pot} é {calc_pot}")
+# num_1 = int(input("Digite um número: "))
+# pot = int(input("Digite um número para ser a potência: "))
+# calc_pot = num_1 ** pot
+# print(f"A potência do número {num_1} elevado a {pot} é {calc_pot}")
 
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
+celc = float(input("Digite uma temperatura em célcius: "))
+conversao_celcius_fahrenheit = (celc * 1.8) + 32
+print(f"{celc}Cº convertidos para Fahrenheit é {conversao_celcius_fahrenheit}Fº")
+
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 
 # Strings (str)
