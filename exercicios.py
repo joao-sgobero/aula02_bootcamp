@@ -86,20 +86,32 @@
  
 #Booleanos (bool)
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
-entrada_1 = input("Digite True ou False:")
-entrada_2 = input("Digite True ou False:")
-# Formatando entrada de dados
+# entrada_1 = input("Digite True ou False:")
+# entrada_2 = input("Digite True ou False:")
+# # Formatando entrada de dados
+# formatado_1 = entrada_1.strip().capitalize()
+# formatado_2 = entrada_2.strip().capitalize()
+# # Aplicando os valores para booleano
+# booleano_1 = formatado_1 == "True"
+# booleano_2 = formatado_2 == "True"
+# #Criando a lógica
+# result = booleano_1 and booleano_2
+# print(result)
+
+# 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+entrada_1 = input("Digite True ou False: ")
+entrada_2 = input("Digite True ou False: ")
+#Limpando entrada dos dados
 formatado_1 = entrada_1.strip().capitalize()
 formatado_2 = entrada_2.strip().capitalize()
-# Aplicando os valores para booleano
+#Transformando em booleano
 booleano_1 = formatado_1 == "True"
 booleano_2 = formatado_2 == "True"
 #Criando a lógica
-result = booleano_1 and booleano_2
+result = booleano_1 or booleano_2
+
 print(result)
 
-
-# 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
