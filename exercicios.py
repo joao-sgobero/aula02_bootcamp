@@ -122,11 +122,17 @@
 # print(not booleano)
 
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+# valor1 = int(input("Digite um valor: "))
+# valor2 = int(input("Digite outro valor: "))
+
+# print('Se o valor for igual irá aparecer "True", se não irá aparecer "False"')
+# comparacao = valor1 == valor2
+# print(comparacao)
+
+# 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
 valor1 = int(input("Digite um valor: "))
 valor2 = int(input("Digite outro valor: "))
 
-print('Se o valor for igual irá aparecer "True", se não irá aparecer "False"')
-comparacao = valor1 == valor2
+print('Se o valor for diferente irá aparecer "True", se não irá aparecer "False"')
+comparacao = valor1 != valor2
 print(comparacao)
-
-# 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
