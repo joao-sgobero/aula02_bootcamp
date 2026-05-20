@@ -72,13 +72,17 @@
 
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
 
-data = input("Digite uma data em formato 00/00/0000: ")
-# Guarda os pedaços dentro de uma lista (array)
-data_frac = data.split("/")
-# Puxa os valores pela posição (índice)
-print(f'Dia {data_frac[0]}, Mês {data_frac[1]}, Ano {data_frac[2]}')
+# data = input("Digite uma data em formato 00/00/0000: ")
+# # Guarda os pedaços dentro de uma lista (array)
+# data_frac = data.split("/")
+# # Puxa os valores pela posição (índice)
+# print(f'Dia {data_frac[0]}, Mês {data_frac[1]}, Ano {data_frac[2]}')
 
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
+frase_1 = input("Digite algo: ")
+frase_2 = input("Digite algo: ")
+frase_completa = frase_1 + " " + frase_2
+print(frase_completa)
  
 #Booleanos (bool)
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
