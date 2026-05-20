@@ -113,13 +113,20 @@
 # print(result)
 
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
-entrada = input("Digite um valor booleano 'True' ou 'False': ")
-#Formatando o valor de entrada
-formatado = entrada.strip().capitalize()
-#Transformando em booleano
-booleano = formatado == "True"
-#Imprimindo valor reverso
-print(not booleano)
+# entrada = input("Digite um valor booleano 'True' ou 'False': ")
+# #Formatando o valor de entrada
+# formatado = entrada.strip().capitalize()
+# #Transformando em booleano
+# booleano = formatado == "True"
+# #Imprimindo valor reverso
+# print(not booleano)
 
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+valor1 = int(input("Digite um valor: "))
+valor2 = int(input("Digite outro valor: "))
+
+print('Se o valor for igual irá aparecer "True", se não irá aparecer "False"')
+comparacao = valor1 == valor2
+print(comparacao)
+
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
