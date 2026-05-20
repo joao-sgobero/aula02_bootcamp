@@ -99,19 +99,27 @@
 # print(result)
 
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
-entrada_1 = input("Digite True ou False: ")
-entrada_2 = input("Digite True ou False: ")
-#Limpando entrada dos dados
-formatado_1 = entrada_1.strip().capitalize()
-formatado_2 = entrada_2.strip().capitalize()
-#Transformando em booleano
-booleano_1 = formatado_1 == "True"
-booleano_2 = formatado_2 == "True"
-#Criando a lógica
-result = booleano_1 or booleano_2
+# entrada_1 = input("Digite True ou False: ")
+# entrada_2 = input("Digite True ou False: ")
+# #Limpando entrada dos dados
+# formatado_1 = entrada_1.strip().capitalize()
+# formatado_2 = entrada_2.strip().capitalize()
+# #Transformando em booleano
+# booleano_1 = formatado_1 == "True"
+# booleano_2 = formatado_2 == "True"
+# #Criando a lógica
+# result = booleano_1 or booleano_2
 
-print(result)
+# print(result)
 
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+entrada = input("Digite um valor booleano 'True' ou 'False': ")
+#Formatando o valor de entrada
+formatado = entrada.strip().capitalize()
+#Transformando em booleano
+booleano = formatado == "True"
+#Imprimindo valor reverso
+print(not booleano)
+
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
