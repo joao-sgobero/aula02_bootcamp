@@ -67,10 +67,17 @@
 
 # print(nome.upper(), sobrenome.upper())
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
-frase = input("Digite uma frase: ")
-print(frase.strip())
+# frase = input("Digite uma frase: ")
+# print(frase.strip())
 
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
+
+data = input("Digite uma data em formato 00/00/0000: ")
+# Guarda os pedaços dentro de uma lista (array)
+data_frac = data.split("/")
+# Puxa os valores pela posição (índice)
+print(f'Dia {data_frac[0]}, Mês {data_frac[1]}, Ano {data_frac[2]}')
+
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
  
 #Booleanos (bool)
