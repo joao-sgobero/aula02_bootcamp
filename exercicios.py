@@ -130,9 +130,28 @@
 # print(comparacao)
 
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
-valor1 = int(input("Digite um valor: "))
-valor2 = int(input("Digite outro valor: "))
+# valor1 = int(input("Digite um valor: "))
+# valor2 = int(input("Digite outro valor: "))
 
-print('Se o valor for diferente irá aparecer "True", se não irá aparecer "False"')
-comparacao = valor1 != valor2
-print(comparacao)
+# print('Se o valor for diferente irá aparecer "True", se não irá aparecer "False"')
+# comparacao = valor1 != valor2
+# print(comparacao)
+
+# Exercícios extras
+# Exercício 21: Conversor de Temperatura
+# Escreva um programa que converta a temperatura de Celsius para Fahrenheit. O programa deve solicitar ao usuário a temperatura em Celsius e, 
+# utilizando try-except, garantir que a entrada seja numérica, tratando qualquer ValueError. Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
+# f= (CX1.8) + 32
+entrada = input("Digite a temperatura em Celsius: ")
+
+try:
+    #Tenta converter a entrada para float
+    celsius = float(entrada)
+    #Aplica a formula de conversão
+    fahrenheit = (celsius * 1.8) + 32
+    #Exibe o resultado formatado
+    print(f"A temperatura de {celsius}Cº equivale a {fahrenheit:.1f}F.")
+except ValueError:
+    #Trata o erro caso ele não seja um número válido
+    print("Erro: Por favor, insira um valor numérico valido (Ex: 25 ou 23.5).")
+    
