@@ -215,18 +215,40 @@
 # Escreva um programa que solicite ao usuário para digitar um número. Utilize try-except para assegurar que a entrada seja numérica e 
 # utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
 
+# try:
+#     numero = int(input("Digite um número inteiro: "))
+#     if numero > 0:
+#         print("É um número positivo")
+#     elif numero < 0:
+#         print("É um número negativo")
+#     else:
+#         print("O número é zero")
+#     if numero % 2 == 0:
+#         print("Número é par")
+#     else: 
+#         print("Número é impar")
+# except ValueError:
+#     print("Digite um número válido")
 
+# Exercício 25: Conversão de Tipo com Validação
+# Crie um script que solicite ao usuário uma lista de números separados por vírgula. O programa deve converter a string de entrada em uma lista de números inteiros. 
+# Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. Se a conversão falhar ou um elemento não for um inteiro, 
+# imprima uma mensagem de erro. Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+
+entrada = input("Digite números separado por virgula. Exemplo: 1, 2, 3...: ")
 try:
-    numero = int(input("Digite um número inteiro: "))
-    if numero > 0:
-        print("É um número positivo")
-    elif numero < 0:
-        print("É um número negativo")
-    else:
-        print("O número é zero")
-    if numero % 2 == 0:
-        print("Número é par")
-    else: 
-        print("Número é impar")
+    #Quebrando a string em array
+    numeros = entrada.split(",")
+    #Criando uma lista vazia para guardar os números
+    lista_inteiros = []
+    #Loop para processar e validar dados
+    for i in numeros:
+        #remove espaços em branco
+        item_limpo = i.strip()
+        #tenta converter para inteiro
+        numero = int(item_limpo)
+        #se deu tudo certo passa para a lista limpa
+        lista_inteiros.append(numero)
+    print(f"Sucesso! Sua lista de inteiros: {lista_inteiros}")
 except ValueError:
-    print("Digite um número válido")
+    print("Erro: A lista contém elementos inválidos! Certifique-se de digitar apenas números inteiros separados por vírgula.")
