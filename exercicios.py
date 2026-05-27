@@ -185,28 +185,48 @@
 # Use try-except para lidar com divisões por zero e entradas não numéricas. Utilize if-elif-else para realizar a 
 # operação matemática baseada no operador fornecido. Imprima o resultado ou uma mensagem de erro apropriada.
 
-operadores_validos = ["+", "-", "*", "/"]
+# operadores_validos = ["+", "-", "*", "/"]
+
+# try:
+#     num1 = float(input("Digite um número: "))
+#     operador = input("Digite um operador (+, -, *, /): ").strip()
+#     #Validação do operador
+#     if operador not in operadores_validos:
+#         raise ValueError("Operador invalido use apenas + - * ou /.")
+#     num2 = float(input("Digite um segundo número: "))
+
+#     #Executando operações
+#     if operador == "+":
+#         resultado = num1 + num2
+#     elif operador == "-":
+#         resultado = num1 - num2
+#     elif operador == "*":
+#         resultado = num1 * num2
+#     elif operador == "/":
+#         resultado = num1 / num2
+#     print(f"O resultado de {num1} {operador} {num2} é = {resultado}")
+
+# except ValueError as erro_num:
+#     print(f"Erro de entrada: {erro_num}")
+# except ZeroDivisionError:
+#     print("Erro matemático, não é possivel dividir por zero!")
+
+# Exercício 24: Classificador de Números
+# Escreva um programa que solicite ao usuário para digitar um número. Utilize try-except para assegurar que a entrada seja numérica e 
+# utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
+
 
 try:
-    num1 = float(input("Digite um número: "))
-    operador = input("Digite um operador (+, -, *, /): ").strip()
-    #Validação do operador
-    if operador not in operadores_validos:
-        raise ValueError("Operador invalido use apenas + - * ou /.")
-    num2 = float(input("Digite um segundo número: "))
-
-    #Executando operações
-    if operador == "+":
-        resultado = num1 + num2
-    elif operador == "-":
-        resultado = num1 - num2
-    elif operador == "*":
-        resultado = num1 * num2
-    elif operador == "/":
-        resultado = num1 / num2
-    print(f"O resultado de {num1} {operador} {num2} é = {resultado}")
-
-except ValueError as erro_num:
-    print(f"Erro de entrada: {erro_num}")
-except ZeroDivisionError:
-    print("Erro matemático, não é possivel dividir por zero!")
+    numero = int(input("Digite um número inteiro: "))
+    if numero > 0:
+        print("É um número positivo")
+    elif numero < 0:
+        print("É um número negativo")
+    else:
+        print("O número é zero")
+    if numero % 2 == 0:
+        print("Número é par")
+    else: 
+        print("Número é impar")
+except ValueError:
+    print("Digite um número válido")
