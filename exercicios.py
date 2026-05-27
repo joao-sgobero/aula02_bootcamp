@@ -141,17 +141,41 @@
 # Exercício 21: Conversor de Temperatura
 # Escreva um programa que converta a temperatura de Celsius para Fahrenheit. O programa deve solicitar ao usuário a temperatura em Celsius e, 
 # utilizando try-except, garantir que a entrada seja numérica, tratando qualquer ValueError. Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
-# f= (CX1.8) + 32
-entrada = input("Digite a temperatura em Celsius: ")
+
+# entrada = input("Digite a temperatura em Celsius: ")
+
+# try:
+#     #Tenta converter a entrada para float
+#     celsius = float(entrada)
+#     #Aplica a formula de conversão
+#     fahrenheit = (celsius * 1.8) + 32
+#     #Exibe o resultado formatado
+#     print(f"A temperatura de {celsius}Cº equivale a {fahrenheit:.1f}F.")
+# except ValueError:
+#     #Trata o erro caso ele não seja um número válido
+#     print("Erro: Por favor, insira um valor numérico valido (Ex: 25 ou 23.5).")
+
+# Exercício 22: Verificador de Palíndromo
+# Crie um programa que verifica se uma palavra ou frase é um palíndromo (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). 
+# Utilize try-except para garantir que a entrada seja uma string. Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+
+entrada = input("Digite uma frase ou palavra: ")
 
 try:
-    #Tenta converter a entrada para float
-    celsius = float(entrada)
-    #Aplica a formula de conversão
-    fahrenheit = (celsius * 1.8) + 32
-    #Exibe o resultado formatado
-    print(f"A temperatura de {celsius}Cº equivale a {fahrenheit:.1f}F.")
-except ValueError:
-    #Trata o erro caso ele não seja um número válido
-    print("Erro: Por favor, insira um valor numérico valido (Ex: 25 ou 23.5).")
-    
+    #Verificar se a entrada é vazia
+    if entrada.strip() == "":
+        raise ValueError("Você não pode deixar o campo vazio")
+    #Verificar se são apenas números
+    if entrada.isdigit():
+        raise ValueError("Não é possivel digitar apenas números!")
+    #Tratar os dados
+    dados_limpos = entrada.replace(" ", "").lower()
+    #inverter os dados
+    texto_invertido = dados_limpos[::-1]
+    #comparar os dados
+    if dados_limpos == texto_invertido:
+        print("É um palíndromo")
+    else:
+        print("Não é um palíndromo")
+except ValueError as erro:
+    print(f"Erro de validação: {erro}")
