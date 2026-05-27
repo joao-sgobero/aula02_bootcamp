@@ -159,23 +159,54 @@
 # Crie um programa que verifica se uma palavra ou frase é um palíndromo (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). 
 # Utilize try-except para garantir que a entrada seja uma string. Dica: Utilize a função isinstance() para verificar o tipo da entrada.
 
-entrada = input("Digite uma frase ou palavra: ")
+# entrada = input("Digite uma frase ou palavra: ")
+
+# try:
+#     #Verificar se a entrada é vazia
+#     if entrada.strip() == "":
+#         raise ValueError("Você não pode deixar o campo vazio")
+#     #Verificar se são apenas números
+#     if entrada.isdigit():
+#         raise ValueError("Não é possivel digitar apenas números!")
+#     #Tratar os dados
+#     dados_limpos = entrada.replace(" ", "").lower()
+#     #inverter os dados
+#     texto_invertido = dados_limpos[::-1]
+#     #comparar os dados
+#     if dados_limpos == texto_invertido:
+#         print("É um palíndromo")
+#     else:
+#         print("Não é um palíndromo")
+# except ValueError as erro:
+#     print(f"Erro de validação: {erro}")
+
+# Exercício 23: Calculadora Simples
+# Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. 
+# Use try-except para lidar com divisões por zero e entradas não numéricas. Utilize if-elif-else para realizar a 
+# operação matemática baseada no operador fornecido. Imprima o resultado ou uma mensagem de erro apropriada.
+
+operadores_validos = ["+", "-", "*", "/"]
 
 try:
-    #Verificar se a entrada é vazia
-    if entrada.strip() == "":
-        raise ValueError("Você não pode deixar o campo vazio")
-    #Verificar se são apenas números
-    if entrada.isdigit():
-        raise ValueError("Não é possivel digitar apenas números!")
-    #Tratar os dados
-    dados_limpos = entrada.replace(" ", "").lower()
-    #inverter os dados
-    texto_invertido = dados_limpos[::-1]
-    #comparar os dados
-    if dados_limpos == texto_invertido:
-        print("É um palíndromo")
-    else:
-        print("Não é um palíndromo")
-except ValueError as erro:
-    print(f"Erro de validação: {erro}")
+    num1 = float(input("Digite um número: "))
+    operador = input("Digite um operador (+, -, *, /): ").strip()
+    #Validação do operador
+    if operador not in operadores_validos:
+        raise ValueError("Operador invalido use apenas + - * ou /.")
+    num2 = float(input("Digite um segundo número: "))
+
+    #Executando operações
+    if operador == "+":
+        resultado = num1 + num2
+    elif operador == "-":
+        resultado = num1 - num2
+    elif operador == "*":
+        resultado = num1 * num2
+    elif operador == "/":
+        resultado = num1 / num2
+    print(f"O resultado de {num1} {operador} {num2} é = {resultado}")
+
+except ValueError as erro_num:
+    print(f"Erro de entrada: {erro_num}")
+except ZeroDivisionError:
+    print("Erro matemático, não é possivel dividir por zero!")
